@@ -1,3 +1,6 @@
+// Copyright (c) 2016-2022 Association of Universities for Research in Astronomy, Inc. (AURA)
+// For license information see LICENSE or https://opensource.org/licenses/BSD-3-Clause
+
 package lucuma
 
 import japgolly.scalajs.react._
@@ -11,7 +14,7 @@ import lucuma.mt.mousetrap.mod.ExtendedKeyboardEvent
 package object mousetrap {
 
   val Mousetrap = lucuma.mt.mousetrap.mod.^
-  type CallbackFn = js.Function2[ /* e */ ExtendedKeyboardEvent, /* combo */ String, Boolean]
+  type CallbackFn = js.Function2[ /* e */ ExtendedKeyboardEvent, /* combo */ String, js.Any]
 
   implicit class CallbackOps(cb: CallbackTo[Boolean]) {
     def toCBF: CallbackFn = (_: ExtendedKeyboardEvent, _: String) => cb.runNow()
@@ -22,7 +25,7 @@ package mousetrap {
   final case class KeyBinding(keys: List[String], action: CallbackTo[Boolean])
 
   object KeyBinding {
-    def apply(key: String, action:       => Callback): KeyBinding =
+    def apply(key: String, action: => Callback): KeyBinding =
       KeyBinding(List(key), action.map(_ => true))
 
     def apply(key: List[String], action: => Callback): KeyBinding =
