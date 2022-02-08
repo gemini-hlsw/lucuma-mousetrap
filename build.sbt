@@ -22,7 +22,7 @@ lazy val root = project
     // because npm is slow
     useYarn                 := true,
     stUseScalaJsDom         := true,
-    tlFatalWarnings := false, // By necessity facades will have unused params
+    tlFatalWarnings         := false, // By necessity facades will have unused params
     Compile / doc / sources := Seq(),
     // focus only on these libraries
     stMinimize              := Selection.AllExcept("mousetrap"),
