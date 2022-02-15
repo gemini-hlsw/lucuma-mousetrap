@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "mousetrap": "^1.6.5"
+  },
+  "devDependencies": {
+    "@types/mousetrap": "^1.6.9"
+  }
+}

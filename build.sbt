@@ -11,11 +11,6 @@ lazy val root = project
   .settings(
     // shade into another package
     stOutputPackage         := "lucuma.mt",
-    /* javascript / typescript deps */
-    Compile / npmDependencies ++= Seq(
-      "mousetrap"        -> "1.6.5",
-      "@types/mousetrap" -> "1.6.5"
-    ),
     stSourceGenMode         := SourceGenMode.ResourceGenerator,
     /* disabled because it somehow triggers many warnings */
     scalaJSLinkerConfig ~= (_.withSourceMap(false)),
