@@ -28,7 +28,7 @@ lazy val root = project
     stMinimize              := Selection.AllExcept("mousetrap"),
     libraryDependencies ++= Seq(
       "com.github.japgolly.scalajs-react" %%% "core"   % "1.7.7",
-      "io.github.cquiroz.react"           %%% "common" % "0.11.2"
+      "io.github.cquiroz.react"           %%% "common" % "0.11.5-S1"
     )
   )
   .enablePlugins(ScalablyTypedConverterGenSourcePlugin)
