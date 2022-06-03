@@ -5,11 +5,11 @@ package lucuma
 
 import japgolly.scalajs.react._
 import japgolly.scalajs.react.vdom.html_<^._
-import react.common._
-import scala.scalajs.js
-import scala.scalajs.js.annotation.JSImport
-import scala.scalajs.js.JSConverters._
 import lucuma.mt.mousetrap.mod.ExtendedKeyboardEvent
+import react.common._
+
+import scala.scalajs.js
+import scala.scalajs.js.JSConverters._
 
 package object mousetrap {
 
