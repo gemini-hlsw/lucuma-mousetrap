@@ -27,7 +27,7 @@ lazy val root = project
     // focus only on these libraries
     stMinimize              := Selection.AllExcept("mousetrap"),
     libraryDependencies ++= Seq(
-      "com.github.japgolly.scalajs-react" %%% "core"   % "1.7.7",
+      "com.github.japgolly.scalajs-react" %%% "core"   % "2.1.1",
       "io.github.cquiroz.react"           %%% "common" % "0.11.2"
     )
   )
